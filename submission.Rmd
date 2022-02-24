@@ -1,0 +1,41 @@
+---
+title: "HDAT9600 Team Based Learning Activity"
+subtitle: "TBLA 3. Linear models 2"
+author: "A. Student"
+date: "01/01/1990"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# leave this code here, but feel free to adjust the options or add some more
+# see the knitr documentation for details
+knitr::opts_chunk$set(echo = TRUE, fig.width=12, fig.height=12)
+```
+
+## Introduction
+
+In this task, you will use a dataset called `tvdoctor` which is contained in the _faraway_ package for R which you should already have installed. If not, install it now using the Packages tab in RStudio or the `install.packages()` function at R console prompt.
+
+The origins of this dataset are unknown, and therefore its veracity should be viewed with some suspicion, but it purports to contain data collected in 1993 for life expectancy (the `life` variable), the number of people per television set `tv`, and the number of people per doctor `doctor` in 38 different countries. Obviously this is a rather inadequate dataset, even if the data are real, but it is useful for teaching purposes.
+
+## Accessing the data
+
+We can use the `data()` function from the `utils` package to load the data into the R environment, and the `head()` function to take a sneak peek.
+
+```{r}
+data(tvdoctor, package = "faraway")
+head(tvdoctor)
+```
+
+
+## Instructions
+
+1. Fit a linear regression model to the `tvdoctor` dataset using `life` as the outcome (response) variable and the other two variables as predictors. Print the model summary and provide a brief interpretation for the model estimates.
+1. Check the normality assumption for the errors using plots and/ or statistical tests. Discuss on what you find.
+1. Check the constant variance assumption for the errors using plots and/ or statistical tests. Discuss on what you find.
+
+_**Note that we will discuss your findings and interpretation in the onine tutorial**_
+
+## Submission
+
+Work with your group to add your analysis to this file using appropriate Rmarkdown formatting and R code chunks. Add and commit your changes as you go. Once you are ready, push all your changes to submit. If necessary, check out the introductory tutorials on knitr and git. 
